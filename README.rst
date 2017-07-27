@@ -149,8 +149,18 @@ explaining the various command line options.
 Installation
 ------------
 
-Instruction on installing ROUGE can be found
-`here <http://jpbalb.in/post/42675198985/figuring-out-rouge>`__.
+`RELEASE-1.5.5/` contains the necessary rouge-1.5.5 perl scripts.
+
+On macOS, you want to:
+
+```bash
+brew install perl```
+
+then generate the WordNet 2.0 exception database
+```bash
+cd RELEASE-1.5.5/data/WordNet-2.0-Exceptions
+./buildExeptionDB.pl . exc WordNet-2.0.exc.db
+```
 
 Depending on your system, you might have to run the following commands
 as root.
@@ -173,7 +183,7 @@ If saving the rouge path using this script doesn't work on your system, you can 
 
 ::
 
-    r = Rouge155('/absolute/path/to/ROUGE-1.5.5/directory') 
+    r = Rouge155('/absolute/path/to/ROUGE-1.5.5/directory')
 
 To test if everything is installed correctly, run:
 
@@ -194,4 +204,3 @@ If you want to uninstall pyrouge:
 ::
 
     pip uninstall pyrouge
-
