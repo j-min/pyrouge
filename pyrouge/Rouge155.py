@@ -84,7 +84,7 @@ class Rouge155(object):
         if log_level is None:
                 self.log = log.get_global_console_logger()
         else:
-                self.log = log.get_global_console_logger(log_level)		
+                self.log = log.get_global_console_logger(log_level)
         self.__set_dir_properties()
         self._config_file = None
         self._settings_file = self.__get_config_path()
@@ -515,7 +515,7 @@ class Rouge155(object):
             options = rouge_args.split()
         else:
             options = [
-                '-e', self._data_dir,
+                '-m',
                 '-c', 95,
                 '-2',
                 '-1',
@@ -579,7 +579,7 @@ class Rouge155(object):
             return rouge_args
 
     def __add_config_option(self, options):
-        return options + ['-m'] + [self._config_file]
+        return options + ['-e', self._data_dir] + [self._config_file]
 
     def __get_config_path(self):
         if platform.system() == "Windows":
