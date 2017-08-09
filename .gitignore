@@ -34,3 +34,6 @@ nosetests.xml
 .project
 .pydevproject
 .DS_Store
+
+# Do not save generated WordNet exception DB
+*.exc.db

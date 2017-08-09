@@ -159,7 +159,13 @@ brew install perl```
 then generate the WordNet 2.0 exception database
 ```bash
 cd RELEASE-1.5.5/data/WordNet-2.0-Exceptions
-./buildExeptionDB.pl . exc WordNet-2.0.exc.db
+./buildExeptionDB.pl . exc ../WordNet-2.0.exc.db
+```
+
+You will need perl package `XML::DOM` and you can install it via
+
+```bash
+  cpan install XML::DOM
 ```
 
 Depending on your system, you might have to run the following commands
@@ -169,7 +175,8 @@ To install pyrouge, run:
 
 ::
 
-    pip install pyrouge
+    python setup.py build
+    python setup.py install
 
 Assuming a working ROUGE-1.5.5. installation, tell pyrouge the ROUGE
 path with this command:
