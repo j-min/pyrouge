@@ -592,8 +592,8 @@ class Rouge155(object):
             parent_dir = os.path.dirname(__file__)
             config_dir_name = ""
         config_dir = os.path.join(parent_dir, config_dir_name)
-        if not os.path.exists(config_dir):
-            os.makedirs(config_dir)
+        # if not os.path.exists(config_dir):
+        #     os.makedirs(config_dir)
         return os.path.join(config_dir, 'settings.ini')
 
 
